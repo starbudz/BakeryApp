@@ -7,9 +7,38 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:557645750098:android:f4e71fbfe0b62cb543648b",
+        "android_client_info": {
+          "package_name": "com.example.bakeryApp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557645750098-qn7c49lkr01rgu86oc0ofgf6e3kuslte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyW-ekm-Mni3KQ2bo_tnh9g0yyHcdi5ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557645750098-qn7c49lkr01rgu86oc0ofgf6e3kuslte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:557645750098:android:10a96074499f0eb943648b",
         "android_client_info": {
-          "package_name": "com.example.bakeryapp1"
+          "package_name": "com.victor.bakeryapp2"
         }
       },
       "oauth_client": [

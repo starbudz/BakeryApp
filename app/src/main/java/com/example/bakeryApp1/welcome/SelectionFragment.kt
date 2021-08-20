@@ -1,4 +1,4 @@
-package com.example.bakeryapp1.welcome
+package com.example.bakeryApp1.welcome
 
 import android.content.Intent
 import android.os.Bundle

@@ -13,8 +13,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import bakeryApp1.R
 import com.bumptech.glide.Glide
-import com.example.bakeryApp1.users.HomeAdapter
-import com.example.bakeryApp1.users.HomeModel
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.FirebaseDatabase
 
@@ -63,12 +61,12 @@ class HomeAdapter (private val context: Context, private val catalogue: List<Hom
         val dialogBuilder = AlertDialog.Builder(context)
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         //attaching the dialog interface
-        val dialogView = inflater.inflate(R.layout.updateanddeletedialog, null)
+        val dialogView = inflater.inflate(R.layout.purchasedialogue, null)
         dialogBuilder.setView(dialogView)
         //view identification
-        var updatePrice = dialogView.findViewById<TextInputEditText>(R.id.editPrice)
+        var updatePrice = dialogView.findViewById<TextInputEditText>(R.id.SetQuantity)
         var btnDelete = dialogView.findViewById<Button>(R.id.btnDelete)
-        var btnUpdate = dialogView.findViewById<Button>(R.id.btnUpdate)
+        var btnUpdate = dialogView.findViewById<Button>(R.id.btnCancel)
 
         //customize the dialog box
         dialogBuilder.setTitle("Update or Delete a Product")

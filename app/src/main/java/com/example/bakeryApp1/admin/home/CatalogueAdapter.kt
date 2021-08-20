@@ -63,9 +63,9 @@ class CatalogueAdapter(private val context: Context, private val catalogue: List
         val dialogView = inflater.inflate(R.layout.updateanddeletedialog, null)
         dialogBuilder.setView(dialogView)
         //view identification
-        var updatePrice = dialogView.findViewById<TextInputEditText>(R.id.editPrice)
-        var btnDelete = dialogView.findViewById<Button>(R.id.btnDelete)
-        var btnUpdate = dialogView.findViewById<Button>(R.id.btnUpdate)
+        val updatePrice = dialogView.findViewById<TextInputEditText>(R.id.SetQuantity)
+        val btnDelete = dialogView.findViewById<Button>(R.id.btnDelete)
+        val btnUpdate = dialogView.findViewById<Button>(R.id.btnUpdate)
 
         //customize the dialog box
         dialogBuilder.setTitle("Update or Delete a Product")
@@ -75,14 +75,10 @@ class CatalogueAdapter(private val context: Context, private val catalogue: List
         dialog.show()
         //set on click methods
         btnUpdate.setOnClickListener {
-            var priceEntry = updatePrice.text.toString()
-            if (priceEntry.trim() != null){
-                updateProductFirebase(priceEntry,id,name,desc,imagePath)
-                dialog.dismiss()
-                Toast.makeText(context,"Update success",Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(context,"Fill the price first",Toast.LENGTH_LONG).show()
-            }
+            val priceEntry = updatePrice.text.toString()
+            updateProductFirebase(priceEntry,id,name,desc,imagePath)
+            dialog.dismiss()
+            Toast.makeText(context,"Update success",Toast.LENGTH_LONG).show()
         }
 
         btnDelete.setOnClickListener {
@@ -118,11 +114,11 @@ class CatalogueAdapter(private val context: Context, private val catalogue: List
 
 
    class CatalogueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-          var productImage = itemView.findViewById<ImageView>(R.id.image_view)
-          var productName = itemView.findViewById<TextView>(R.id.text_view_1)
-          var productPrice = itemView.findViewById<TextView>(R.id.text_view_2)
-          var productDesc = itemView.findViewById<TextView>(R.id.text_view_3)
-          var itemClick = itemView.findViewById<CardView>(R.id.cardClick)
+          var productImage = itemView.findViewById<ImageView>(R.id.image_view)!!
+          var productName = itemView.findViewById<TextView>(R.id.text_view_1)!!
+          var productPrice = itemView.findViewById<TextView>(R.id.text_view_2)!!
+          var productDesc = itemView.findViewById<TextView>(R.id.text_view_3)!!
+          var itemClick = itemView.findViewById<CardView>(R.id.cardClick)!!
    }
 
 }
